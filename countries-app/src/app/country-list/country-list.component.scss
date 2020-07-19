@@ -1,7 +1,7 @@
 .region {
     display: flex;
     flex-direction: column;
-    max-width: 250px;
+    max-width: 12em;
     min-width: 8em;
     &-name {
         font-weight: bold;
