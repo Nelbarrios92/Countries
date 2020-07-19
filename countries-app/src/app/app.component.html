@@ -1,0 +1,13 @@
+<div class="header">
+    <div class="input-container">
+        <input [ngModel]="search" autocomplete="off" (ngModelChange)="filterCountries($event)" name="search" id="search" placeholder="Search" />
+        <mat-icon inline="true" aria-label="favorite icon">search</mat-icon>
+    </div>
+</div>
+<div class="list" *ngIf="regions.length > 0">
+    <app-country-list *ngFor="let region of regions" [regionName]="region.name" [countries]="region.countries">
+    </app-country-list>
+</div>
+<div class="no-list" *ngIf="regions.length === 0">
+    No results
+</div>

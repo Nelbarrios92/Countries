@@ -1,0 +1,8 @@
+<div class="region">
+    <div class="region-name">{{regionName}}</div>
+    <div class="country" (click)="openCountryDetails(country)" *ngFor="let country of countries">
+        <img [src]="country.flag" class="country-flag" [alt]="country.name">
+        <span>{{country.name}}</span>
+        <mat-icon *ngIf="country.isFavorite" class="icon-active" aria-label="favorite icon">grade</mat-icon>
+    </div>
+</div>

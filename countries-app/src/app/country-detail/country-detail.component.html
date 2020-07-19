@@ -1,0 +1,17 @@
+<div class="close">
+    <mat-icon mat-dialog-close class="close-button">close</mat-icon>
+</div>
+<mat-dialog-content class="country">
+    <div class="country-details">
+        <div class="country-name">{{country.name}}
+            <mat-icon (click)="country.isFavorite = !country.isFavorite" [ngClass]="{'icon-active': country.isFavorite}" inline="true" aria-label="favorite icon">{{country.isFavorite?'star':'star_outline'}}</mat-icon>
+        </div>
+        <p><span class="label">Region: </span>{{country.region}}</p>
+        <p><span class="label">Population: </span>{{country.population/1000000 | number: '1.2-2'}} M</p>
+        <p><span class="label">Capital: </span>{{country.capital}}</p>
+        <p><span class="label">Currency: </span>{{currencies}}</p>
+        <p><span class="label">Language: </span>{{languages}}</p>
+        <p class="label">Border Countries: {{bordersCountries}}</p>
+    </div>
+    <img [src]="country.flag" class="country-flag" [alt]="country.name">
+</mat-dialog-content>
