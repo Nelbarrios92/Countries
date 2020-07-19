@@ -1,0 +1,28 @@
+.region {
+    display: flex;
+    flex-direction: column;
+    max-width: 12em;
+    min-width: 8em;
+    &-name {
+        font-weight: bold;
+        margin: 1em 0;
+    }
+    .country {
+        display: flex;
+        align-items: start;
+        font-size: 12px;
+        margin: .2em;
+        cursor: pointer;
+        &-flag {
+            width: 1.5em;
+            height: 1em;
+            margin-right: 1em;
+        }
+        mat-icon {
+            font-size: 14px;
+            width: 14px;
+            height: 14px;
+            margin-left: 4px;
+        }
+    }
+}
