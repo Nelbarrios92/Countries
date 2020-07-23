@@ -44,7 +44,8 @@ export class AppComponent implements OnInit {
         this.regions.push(region);
       }
     });
-    this.regions.find((region) => region.name === '')?.name = 'Unknown';
+    let blankRegion = this.regions.find((region) => region.name === '');
+    blankRegion? blankRegion.name = 'Unknown': null;
     this.regions.sort((a, b) => (a.name > b.name ? 1 : -1));
   }
 }
